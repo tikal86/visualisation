@@ -1,0 +1,26 @@
+{
+  "name": "visualisation",
+  "version": "1.0.0",
+  "description": "A visualisation application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "https://github.com/tikal86/visualisation",
+  "keywords": [
+    "Electron",
+    "visualisation"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "10.1.5",
+    "webpack": "^5.2.0",
+    "webpack-cli": "^4.1.0"
+  },
+  "dependencies": {
+    "elm-webpack-loader": "^7.0.1",
+    "eslint": "^7.12.0",
+    "rxjs": "6.6.3"
+  }
+}
