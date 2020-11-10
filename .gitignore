@@ -104,4 +104,7 @@ dist
 .tern-port
 
 #elm
-elm-stuff
+elm-stuff/
+
+#intellij
+.idea/
