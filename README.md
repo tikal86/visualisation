@@ -13,3 +13,7 @@ Select properties, select graph
 
 ## Plugins
 Moving average
+
+## Work instructions
+This branch is folowing the guide at
+https://github.com/johnomarkid/elm-electron-webpack

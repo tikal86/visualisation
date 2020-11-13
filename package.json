@@ -4,7 +4,7 @@
   "description": "A visualisation application",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "elm make src/elm/Main.elm --output src/static/bundle.js && electron ."
   },
   "repository": "https://github.com/tikal86/visualisation",
   "keywords": [
