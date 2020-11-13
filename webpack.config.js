@@ -1,9 +1,10 @@
 const path = require('path');
 
 module.exports = {
-    entry: '/src/static/index.js',
+    entry: './src/static/index.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
+        publicPath: '/assets/',
         filename: 'bundle.js'
     },
     module: {
@@ -22,5 +23,11 @@ module.exports = {
     },
     resolve: {
         extensions: ['.js', '.elm']
-    }
+    },
+    devServer: {
+        contentBase: path.join(__dirname, 'dist'),
+        compress: true,
+        port: 9000
+      }
+    
 }

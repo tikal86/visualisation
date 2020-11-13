@@ -1,7 +1,7 @@
-// var Elm = require('../elm/Main.elm');
-const container = document.getElementById('container');
-// const app = Elm.Main.init({node:container});
-
-import Elm from "../elm/Main";
+let Elm = require('../elm/Main');
 console.log(`Elm: ${JSON.stringify(Elm)}`);
-Elm.Main.init({node: container});
+let container = document.getElementById("container");
+console.log(`Elm: ${container}`);
+let app = Elm.Elm.Main.init({node: container});
+app.ports.sendMessage.subscribe(message => console.log('Message from Elm'));
+app.ports.messageReceiver.send('Data for Elm');

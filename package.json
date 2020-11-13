@@ -4,7 +4,8 @@
   "description": "A visualisation application",
   "main": "main.js",
   "scripts": {
-    "start": "elm make src/elm/Main.elm --output src/static/bundle.js && electron ."
+    "start": "webpack && electron .",
+    "dev": "webpack && webpack serve --content-base /dist && electron ., this does not work"
   },
   "repository": "https://github.com/tikal86/visualisation",
   "keywords": [
@@ -16,11 +17,12 @@
   "devDependencies": {
     "electron": "10.1.5",
     "webpack": "^5.2.0",
-    "webpack-cli": "^4.1.0"
+    "webpack-cli": "^4.2.0"
   },
   "dependencies": {
     "elm-webpack-loader": "^7.0.1",
     "eslint": "^7.12.0",
-    "rxjs": "6.6.3"
+    "rxjs": "6.6.3",
+    "webpack-dev-server": "^3.11.0"
   }
 }
