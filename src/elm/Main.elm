@@ -1,20 +1,16 @@
 port module Main exposing (..)
 
-import Html exposing (text)
+import Html exposing (..)
 import Browser
-import Html exposing (div)
-import Html exposing (h1)
-import Html exposing (input)
 import Html.Attributes exposing (type_)
 import Html.Attributes exposing (placeholder)
-import Html.Events exposing (onInput)
+import Html.Events exposing (..)
 import Html.Attributes exposing (value)
-import Html exposing (button)
 import Html.Events exposing (onClick)
 import Json.Decode as D
 
 
-main : Html.Html msg
+main : Program () Model Msg
 main =
     Browser.element {
         init = init,
@@ -90,5 +86,5 @@ view model =
 -- detect Enter
 ifIsEnter : msg -> D.Decoder msg
 ifIsEnter msg = 
-    D.field "key" D.String
+    D.field "key" D.string
     |> D.andThen (\key -> if key == "Enter" then D.succeed msg else D.fail "some other key")
