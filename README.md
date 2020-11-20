@@ -17,3 +17,9 @@ Moving average
 ## Work instructions
 This branch is folowing the guide at
 https://github.com/johnomarkid/elm-electron-webpack
+
+<div id="text"></div>
+
+<script>
+document.getElementById("text").innerHTML = "Text added by JavaScript code";
+</script>
